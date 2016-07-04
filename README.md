@@ -16,62 +16,62 @@ bower i style-updater -S
 
 1. Import component
 
-```html
-<link rel="import" href="path/to/folder/style-updater.html">
-```
+	```html
+		<link rel="import" href="path/to/folder/style-updater.html">
+	```
 2. Create wrapper \<div\> to area, you like listen
-```html
-<div class="wrapper" is="style-updater">
-	<some-component></some-component>
-	<some-component></some-component>
-	<some-component></some-component>
-	<some-component></some-component>
-</div>
-```
+	```html
+		<div class="wrapper" is="style-updater">
+			<some-component></some-component>
+			<some-component></some-component>
+			<some-component></some-component>
+			<some-component></some-component>
+		</div>
+	```
 3. Add target attribute. It`s can be any css selector. Target find elements, wich styles will be update
-```html
-<div class="wrapper" is="style-updater" target="some-component">
-	<some-component></some-component>
-	<some-component></some-component>
-	<some-component></some-component>
-	<some-component></some-component>
-</div>
-```
+	```html
+		<div class="wrapper" is="style-updater" target="some-component">
+			<some-component></some-component>
+			<some-component></some-component>
+			<some-component></some-component>
+			<some-component></some-component>
+		</div>
+	```
 4. And add listeners, like "element-selector:event, element-selector2:event2:event3". You can use any css selectors and keyword 'this'.
-```html
-<div class="wrapper" is="style-updater" target="some-component" events="this:mousemove, some-component:click|touchend">
-	<some-component></some-component>
-	<some-component></some-component>
-	<some-component></some-component>
-	<some-component></some-component>
-</div>
-```
+	```html
+		<div class="wrapper" is="style-updater" target="some-component" events="this:mousemove, some-component:click|touchend">
+			<some-component></some-component>
+			<some-component></some-component>
+			<some-component></some-component>
+			<some-component></some-component>
+		</div>
+	```
 5. Now you can use custom properties like native styles, wich will be changes 'on-life'
 
-```html
-<dom-module id="shared styles">
-	<template>
-		<style>
-			some-component{
-				--some-component-color: #fff;
-			}
-			some-component:hover{
-				--some-component-color: #777;
-			}
-			some-component:cheched + some-component{
-				--some-component-color: #aaa;
-			}
-		</style>
-	</template>
-</dom-module>
-<style is="shared styles"></style>
-<div class="wrapper" is="style-updater" target="some-component" events="this:mousemove, some-component:click">
-	<some-component></some-component>
-	<some-component></some-component>
-	<some-component></some-component>
-	<some-component></some-component>
-</div>
-```
+	```html
+		<dom-module id="shared styles">
+			<template>
+				<style>
+					some-component{
+						--some-component-color: #fff;
+					}
+					some-component:hover{
+						--some-component-color: #777;
+					}
+					some-component:cheched + some-component{
+						--some-component-color: #aaa;
+					}
+				</style>
+			</template>
+		</dom-module>
+		<style is="shared styles"></style>
+		<div class="wrapper" is="style-updater" target="some-component" events="this:mousemove, some-component:click">
+			<some-component></some-component>
+			<some-component></some-component>
+			<some-component></some-component>
+			<some-component></some-component>
+		</div>
+	```
 6. I'm waiting yours pull-requests =)
 
 # \<simple-controller-behavior\>
