@@ -77,7 +77,7 @@ bower i style-updater -S
 	```
 6. I'm waiting yours pull-requests =)
 
-# \<simple-controller-behavior\>
+# simple-controller-behavior
 
 this behavior create add to element simple dispatcher, which can find, watch and controll elements
 
