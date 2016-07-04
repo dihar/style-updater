@@ -89,12 +89,14 @@ this behavior create add to element simple dispatcher, which can find, watch and
 		<link rel="import" href="path/to/folder/simple-controller-behavior.html">
 	```
 2. Add controller to behaviors
+
 	```javascript
 		behaviors:[
 		  DiharBehaviors.SimpleControllerBehavior
 		],
 	```
 3. Add property 'list' with structure like
+
 	```javascript
 		properties: {
 			list: {
@@ -134,6 +136,7 @@ this behavior create add to element simple dispatcher, which can find, watch and
 4. When alement is attached run `var states = activateController()`, in `states` available all data from controller
 5. You can add some elements with `addElementToController(config)`, where `config` is object like `list` (see step 3.) item
 6. You can add initial states in `list` property if `several: true`, like:
+
 	```
 		initial: {
 		  disabled: [
